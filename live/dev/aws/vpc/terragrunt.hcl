@@ -4,7 +4,7 @@ include {
 
 terraform {
   #source = "git::git@github.com:terraform-aws-modules/terraform-aws-vpc.git?ref=v2.18.0"
-  source = "${get_parent_terragrunt_dir()}/modules/aws//terraform-aws-module-vpc"
+  source = "${get_parent_terragrunt_dir()}/modules/aws//vpc"
 }
 
 
