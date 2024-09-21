@@ -26,6 +26,7 @@ inputs = {
   tags = {
     Terraform = "true"
     Environment = "dev"
+    Managed_by = "tf"
   }
 
 }
