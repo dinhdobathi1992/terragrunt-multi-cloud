@@ -6,6 +6,12 @@ projects:
       when_modified: ["*.hcl", "*.tf", "*.tfvars"]
       enabled: true
     workflow: terragrunt # Custom workflow name
+  - dir: live/dev/az/resource-group # Ensure the correct directory is used
+    workspace: default
+    autoplan:
+      when_modified: ["*.hcl", "*.tf", "*.tfvars"]
+      enabled: true
+    workflow: terragrunt # Custom workflow name
 workflows:
   terragrunt:
     plan:
