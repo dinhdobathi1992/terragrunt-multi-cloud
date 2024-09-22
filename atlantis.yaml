@@ -1,0 +1,17 @@
+version: 3
+projects:
+  - dir: live/dev/aws/vpc # Ensure the correct directory is used
+    workspace: default
+    autoplan:
+      when_modified: ["*.hcl", "*.tf", "*.tfvars"]
+      enabled: true
+    workflow: terragrunt # Custom workflow name
+workflows:
+  terragrunt:
+    plan:
+      steps:
+        - run: terragrunt init
+        - run: terragrunt plan
+    apply:
+      steps:
+        - run: terragrunt apply
