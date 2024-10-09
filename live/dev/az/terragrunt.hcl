@@ -31,7 +31,7 @@ provider "azurerm" {
   client_id       = "2305e6da-66f9-4c84-8701-96b513c5b377"
   subscription_id = "48fb7099-61a3-4f06-9082-78beba63a820"
   tenant_id       = "23131c9d-5769-486a-851b-18c604ca85cf"
-  oidc_token_file_path  = "/var/run/secrets/kubernetes.io/serviceaccount/token"
+  oidc_token_file_path  = "/token/oidc-token"
 }
 EOF
 }
