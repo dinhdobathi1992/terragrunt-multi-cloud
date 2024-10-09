@@ -7,7 +7,7 @@ dependency aws_vpc_production_use1 {
 
   mock_outputs_allowed_terraform_commands = ["validate", "plan"]
   mock_outputs = {
-    id = "vpc-fake123"
+    id = "vpc-fake1234"
   }
 }
 
