@@ -13,7 +13,7 @@ locals {
 
   # Extract the variables we need for easy access
   subscription_id                        = local.env_vars.locals.subscription_id
-  client_id                              = local.env_vars.locals.client_id
+  #client_id                              = local.env_vars.locals.client_id
   tenant_id                              = local.env_vars.locals.tenant_id
   deployment_storage_resource_group_name = local.site_vars.locals.deployment_storage_resource_group_name
   deployment_storage_account_name        = local.site_vars.locals.deployment_storage_account_name
@@ -27,7 +27,7 @@ generate "provider" {
 provider "azurerm" {
   features {}
   use_oidc = true
-  client_id = "86549c83-f3a8-4f65-8843-e8dc0c2c9de9"
+  #client_id = "86549c83-f3a8-4f65-8843-e8dc0c2c9de9"
   tenant_id = "23131c9d-5769-486a-851b-18c604ca85cf"
   subscription_id = "48fb7099-61a3-4f06-9082-78beba63a820"
 }
