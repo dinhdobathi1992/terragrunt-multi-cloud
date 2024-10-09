@@ -27,6 +27,7 @@ generate "provider" {
 provider "azurerm" {
   features {}
   use_oidc = true
+  subscription_id = "48fb7099-61a3-4f06-9082-78beba63a820"
 }
 EOF
 }
