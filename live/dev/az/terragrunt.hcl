@@ -27,6 +27,9 @@ generate "provider" {
   contents  = <<EOF
 provider "azurerm" {
   features {}
+  use_msi = true
+  client_id = "86549c83-f3a8-4f65-8843-e8dc0c2c9de9"
+  tenant_id = "23131c9d-5769-486a-851b-18c604ca85cf"
 }
 EOF
 }
