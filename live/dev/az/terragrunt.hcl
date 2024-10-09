@@ -49,8 +49,5 @@ terraform {
 # where terraform_remote_state data sources are placed directly into the modules.
 inputs = merge(
   local.env_vars.locals,
-  local.site_vars.locals,
-  {
-    client_secret = local.client_secret
-  }
+  local.site_vars.locals
 )
