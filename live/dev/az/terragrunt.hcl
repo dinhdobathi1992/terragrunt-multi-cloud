@@ -14,7 +14,6 @@ locals {
   # Extract the variables we need for easy access
   subscription_id                        = local.env_vars.locals.subscription_id
   client_id                              = local.env_vars.locals.client_id
-  client_secret                          = get_env("ARM_CLIENT_SECRET")
   tenant_id                              = local.env_vars.locals.tenant_id
   deployment_storage_resource_group_name = local.site_vars.locals.deployment_storage_resource_group_name
   deployment_storage_account_name        = local.site_vars.locals.deployment_storage_account_name
