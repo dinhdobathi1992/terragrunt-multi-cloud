@@ -13,8 +13,7 @@ locals {
 
   # Extract the variables we need for easy access
   subscription_id                        = local.env_vars.locals.subscription_id
-  client_id                              = local.env_vars.locals.client_id
-  client_secret                          = get_env("ARM_CLIENT_SECRET")
+  #client_id                              = local.env_vars.locals.client_id
   tenant_id                              = local.env_vars.locals.tenant_id
   deployment_storage_resource_group_name = local.site_vars.locals.deployment_storage_resource_group_name
   deployment_storage_account_name        = local.site_vars.locals.deployment_storage_account_name
@@ -27,9 +26,10 @@ generate "provider" {
   contents  = <<EOF
 provider "azurerm" {
   features {}
-  use_msi = true
-  client_id = "86549c83-f3a8-4f65-8843-e8dc0c2c9de9"
+  use_oidc = true
+  #client_id = "86549c83-f3a8-4f65-8843-e8dc0c2c9de9"
   tenant_id = "23131c9d-5769-486a-851b-18c604ca85cf"
+  subscription_id = "48fb7099-61a3-4f06-9082-78beba63a820"
 }
 EOF
 }
@@ -50,8 +50,5 @@ terraform {
 # where terraform_remote_state data sources are placed directly into the modules.
 inputs = merge(
   local.env_vars.locals,
-  local.site_vars.locals,
-  {
-    client_secret = local.client_secret
-  }
+  local.site_vars.locals
 )
