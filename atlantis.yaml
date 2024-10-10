@@ -20,4 +20,4 @@ workflows:
         - run: terragrunt plan
     apply:
       steps:
-        - run: terragrunt apply
+        - run: terragrunt apply -auto-approve
