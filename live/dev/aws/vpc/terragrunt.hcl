@@ -13,7 +13,7 @@ terraform {
 # https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/2.18.0?tab=inputs
 ###########################################################
 inputs = {
-  name = "my-vpc"
+  name = "my-vpc2"
   cidr = "10.0.0.0/16"
 
   azs             = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
